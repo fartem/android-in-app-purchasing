@@ -1,7 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/user_profile_avatar"
+        android:layout_width="@dimen/image_size_profile"
+        android:layout_height="@dimen/image_size_profile"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        tools:text="domino_1099"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_avatar" />
+
+    <TextView
+        android:id="@+id/user_bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_name"
+        tools:text="Welcome to the official DonateMe Page for domino_1099!" />
+
+    <TextView
+        android:id="@+id/user_contacts_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:text="@string/user_contacts"
+        app:layout_constraintEnd_toEndOf="@+id/user_bio"
+        app:layout_constraintStart_toStartOf="@+id/user_bio"
+        app:layout_constraintTop_toBottomOf="@+id/user_bio" />
+
+    <ImageView
+        android:id="@+id/user_email"
+        android:layout_width="@dimen/image_size_contact"
+        android:layout_height="@dimen/image_size_contact"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintBottom_toBottomOf="@+id/user_phone"
+        app:layout_constraintEnd_toStartOf="@+id/user_phone" />
+
+    <ImageView
+        android:id="@+id/user_phone"
+        android:layout_width="@dimen/image_size_contact"
+        android:layout_height="@dimen/image_size_contact"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_local_phone"
+        app:layout_constraintEnd_toEndOf="@+id/user_contacts_title"
+        app:layout_constraintStart_toStartOf="@+id/user_contacts_title"
+        app:layout_constraintTop_toBottomOf="@+id/user_contacts_title" />
+
+    <ImageView
+        android:id="@+id/user_address"
+        android:layout_width="@dimen/image_size_contact"
+        android:layout_height="@dimen/image_size_contact"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_location_on"
+        app:layout_constraintBottom_toBottomOf="@+id/user_phone"
+        app:layout_constraintStart_toEndOf="@+id/user_phone" />
+
+    <Button
+        android:id="@+id/user_donate_coffee"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/user_donate_coffee"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/user_donate_beer"
+        app:layout_constraintEnd_toEndOf="@+id/user_donate_beer"
+        app:layout_constraintStart_toStartOf="@+id/user_donate_beer" />
+
+    <Button
+        android:id="@+id/user_donate_beer"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/user_donate_beer"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/user_donate_hotdog"
+        app:layout_constraintEnd_toEndOf="@+id/user_donate_hotdog"
+        app:layout_constraintStart_toStartOf="@+id/user_donate_hotdog" />
+
+    <Button
+        android:id="@+id/user_donate_hotdog"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/user_donate_hotdog"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

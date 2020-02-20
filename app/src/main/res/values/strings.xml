@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Android In-app purchases</string>
+    <string name="app_name">DonateMe</string>
+
+    <string name="user_contacts">Contacts</string>
+
+    <string name="user_donate_coffee">Coffee</string>
+    <string name="user_donate_beer">Beer</string>
+    <string name="user_donate_hotdog">Hotdog</string>
 </resources>
