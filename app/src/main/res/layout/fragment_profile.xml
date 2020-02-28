@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/user_profile_avatar"
+        android:id="@+id/user_image"
         android:layout_width="@dimen/image_size_profile"
         android:layout_height="@dimen/image_size_profile"
         android:layout_marginTop="32dp"
@@ -26,7 +26,7 @@
         tools:text="domino_1099"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_profile_avatar" />
+        app:layout_constraintTop_toBottomOf="@+id/user_image" />
 
     <TextView
         android:id="@+id/user_bio"
