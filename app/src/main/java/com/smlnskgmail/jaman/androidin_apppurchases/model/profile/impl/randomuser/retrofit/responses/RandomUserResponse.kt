@@ -3,5 +3,6 @@ package com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomus
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.RandomUserProfile
 
 data class RandomUserResponse(
-    val randomUserProfile: RandomUserProfile?
+    val randomUserProfile: RandomUserProfile?,
+    val imageLink: String?
 )

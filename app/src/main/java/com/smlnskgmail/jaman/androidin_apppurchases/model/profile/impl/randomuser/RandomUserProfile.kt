@@ -7,9 +7,10 @@ class RandomUserProfile(
     private val name: String,
     private val email: String,
     private val phone: String,
-    private val address: String,
-    private val image: Drawable
+    private val address: String
 ) : Profile {
+
+    private var image: Drawable? = null
 
     override fun name(): String {
         return name
@@ -27,7 +28,13 @@ class RandomUserProfile(
         return address
     }
 
-    override fun image(): Drawable {
+    fun setImage(
+        image: Drawable?
+    ) {
+        this.image = image
+    }
+
+    override fun image(): Drawable? {
         return image
     }
 

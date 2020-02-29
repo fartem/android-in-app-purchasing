@@ -3,6 +3,7 @@ package com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomus
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
+import com.google.gson.JsonObject
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.RandomUserProfile
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.retrofit.responses.RandomUserResponse
 import java.lang.reflect.Type
@@ -15,12 +16,38 @@ class RandomUserResponseDeserializer : JsonDeserializer<RandomUserResponse> {
         context: JsonDeserializationContext?
     ): RandomUserResponse {
         var randomUserProfile: RandomUserProfile? = null
-        val data = json!!.asJsonArray
-        if (data != null) {
+        var imageLink: String? = null
+        if (json != null) {
+            json as JsonObject
+            val data = json.getAsJsonArray("results")[0] as JsonObject
 
+            val dataName = data.get("name") as JsonObject
+            val name = "${dataName.get("first").asString} " +
+                    dataName.get("last").asString
+
+            val email = data.get("email").asString
+            val phone = data.get("phone").asString
+
+            val dataLocation = data.get("location") as JsonObject
+            val dataStreet = dataLocation.get("street") as JsonObject
+
+            val address = "${dataLocation.get("country").asString}, " +
+                    "${dataLocation.get("city").asString}, " +
+                    "${dataStreet.get("name").asString}, " +
+                    dataStreet.get("number").asString
+
+            randomUserProfile = RandomUserProfile(
+                name,
+                email,
+                phone,
+                address
+            )
+
+            imageLink = (data.get("picture") as JsonObject).get("large").asString
         }
         return RandomUserResponse(
-            randomUserProfile
+            randomUserProfile,
+            imageLink
         )
     }
 

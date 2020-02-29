@@ -9,6 +9,6 @@ interface Profile {
     fun phone(): String
     fun address(): String
 
-    fun image(): Drawable
+    fun image(): Drawable?
 
 }

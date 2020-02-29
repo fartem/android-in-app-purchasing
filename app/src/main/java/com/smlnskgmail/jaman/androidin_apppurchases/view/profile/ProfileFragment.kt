@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.smlnskgmail.jaman.androidin_apppurchases.R
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.Profile
+import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.RandomUserProfileApi
 import com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile.ProfilePresenter
 import com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile.ProfilePresenterImpl
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -20,7 +21,10 @@ class ProfileFragment : Fragment(), ProfileView {
         savedInstanceState: Bundle?
     ) {
         profilePresenter = ProfilePresenterImpl()
-//        profilePresenter.initialize()
+        profilePresenter.initialize(
+            this,
+            RandomUserProfileApi()
+        )
 
         user_donate_coffee.setOnClickListener {
             profilePresenter.buyCoffee()
@@ -40,6 +44,15 @@ class ProfileFragment : Fragment(), ProfileView {
         user_image.setImageDrawable(
             profile.image()
         )
+
+        val bio = getString(R.string.user_bio_template).format(
+            profile.name()
+        )
+        user_bio.text = bio
+    }
+
+    override fun showLoadError() {
+
     }
 
     override fun buyCoffee() {

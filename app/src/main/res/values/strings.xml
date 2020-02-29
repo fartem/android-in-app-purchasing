@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DonateMe</string>
 
+    <string name="user_bio_template">Welcome to the official DonateMe page for %s!</string>
     <string name="user_contacts">Contacts</string>
 
     <string name="user_donate_coffee">Coffee</string>
