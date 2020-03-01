@@ -8,6 +8,9 @@ interface ProfileView {
         profile: Profile
     )
 
+    fun startLoading()
+    fun stopLoading()
+
     fun showLoadError()
 
     fun buyCoffee()

@@ -40,6 +40,11 @@ class ProfileFragment : Fragment(), ProfileView {
     override fun profileLoaded(
         profile: Profile
     ) {
+        if (user_donate_page.visibility != View.VISIBLE) {
+            user_data_load_error_view.visibility = View.GONE
+            user_data_loader.visibility = View.GONE
+            user_donate_page.visibility = View.VISIBLE
+        }
         user_name.text = profile.name()
         user_image.setImageDrawable(
             profile.image()
@@ -51,8 +56,18 @@ class ProfileFragment : Fragment(), ProfileView {
         user_bio.text = bio
     }
 
-    override fun showLoadError() {
+    override fun startLoading() {
+        user_donate_page.visibility = View.GONE
+        user_data_loader.visibility = View.VISIBLE
+    }
 
+    override fun stopLoading() {
+        user_data_loader.visibility = View.GONE
+    }
+
+    override fun showLoadError() {
+        user_donate_page.visibility = View.GONE
+        user_data_load_error_view.visibility = View.VISIBLE
     }
 
     override fun buyCoffee() {

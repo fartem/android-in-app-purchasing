@@ -10,6 +10,8 @@ interface ProfilePresenter {
         profileApi: ProfileApi
     )
 
+    fun refresh()
+
     fun buyCoffee()
     fun buyBeer()
     fun buyHotdog()

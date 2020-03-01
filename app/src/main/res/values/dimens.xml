@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margin_default">8dp</dimen>
+    <dimen name="margin_default_double">16dp</dimen>
+    <dimen name="margin_default_medium">24dp</dimen>
+    <dimen name="margin_default_large">32dp</dimen>
+
     <dimen name="image_size_profile">128dp</dimen>
     <dimen name="image_size_contact">36dp</dimen>
+    <dimen name="image_size_error">64dp</dimen>
+
+    <dimen name="button_size_donate">300dp</dimen>
+
+    <dimen name="text_size_user_name">24sp</dimen>
+    <dimen name="text_size_user_info">18sp</dimen>
+    <dimen name="text_size_error">18sp</dimen>
 </resources>

@@ -5,4 +5,6 @@
     <color name="colorAccent">#ffeb3b</color>
 
     <color name="ic_launcher_background">#FFFFFF</color>
+
+    <color name="colorErrorIndicator">#9E9E9E</color>
 </resources>
