@@ -9,6 +9,8 @@ class ProfilePresenterImpl : ProfilePresenter {
     private lateinit var profileView: ProfileView
     private lateinit var profileApi: ProfileApi
 
+    private lateinit var profile: Profile
+
     override fun initialize(
         profileView: ProfileView,
         profileApi: ProfileApi
@@ -26,6 +28,7 @@ class ProfilePresenterImpl : ProfilePresenter {
                 profile: Profile?
             ) {
                 if (profile != null) {
+                    this@ProfilePresenterImpl.profile = profile
                     profileView.stopLoading()
                     profileView.profileLoaded(
                         profile
@@ -36,6 +39,24 @@ class ProfilePresenterImpl : ProfilePresenter {
                 }
             }
         })
+    }
+
+    override fun emailContactSelect() {
+        profileView.sendEmail(
+            profile.email()
+        )
+    }
+
+    override fun phoneContactSelect() {
+        profileView.callToPhoneNumber(
+            profile.phone()
+        )
+    }
+
+    override fun addressContactSelect() {
+        profileView.showAddress(
+            profile.address()
+        )
     }
 
     override fun buyCoffee() {

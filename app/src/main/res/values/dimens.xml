@@ -11,7 +11,7 @@
 
     <dimen name="button_size_donate">300dp</dimen>
 
-    <dimen name="text_size_user_name">24sp</dimen>
-    <dimen name="text_size_user_info">18sp</dimen>
+    <dimen name="text_size_profile_name">24sp</dimen>
+    <dimen name="text_size_profile_info">18sp</dimen>
     <dimen name="text_size_error">18sp</dimen>
 </resources>

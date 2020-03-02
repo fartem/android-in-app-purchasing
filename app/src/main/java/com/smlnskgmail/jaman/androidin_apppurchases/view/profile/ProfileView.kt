@@ -13,6 +13,16 @@ interface ProfileView {
 
     fun showLoadError()
 
+    fun sendEmail(
+        email: String
+    )
+    fun callToPhoneNumber(
+        number: String
+    )
+    fun showAddress(
+        address: String
+    )
+
     fun buyCoffee()
     fun buyBeer()
     fun buyHotdog()

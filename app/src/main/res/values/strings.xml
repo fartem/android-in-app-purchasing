@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">DonateMe</string>
 
-    <string name="user_bio_template">Welcome to the official DonateMe page for %s!</string>
+    <string name="profile_bio_template">Welcome to the official DonateMe page for %s!</string>
 
-    <string name="user_donate_coffee">Coffee</string>
-    <string name="user_donate_beer">Beer</string>
-    <string name="user_donate_hotdog">Hotdog</string>
+    <string name="profile_donate_coffee">Coffee</string>
+    <string name="profile_donate_beer">Beer</string>
+    <string name="profile_donate_hotdog">Hotdog</string>
 
-    <string name="user_load_error_message">Cannot load user data!</string>
-    <string name="user_load_error_action">Refresh</string>
+    <string name="profile_load_error_message">Cannot load user data!</string>
+    <string name="profile_load_error_action">Refresh</string>
+
+    <string name="profile_address_action">Copy</string>
 </resources>

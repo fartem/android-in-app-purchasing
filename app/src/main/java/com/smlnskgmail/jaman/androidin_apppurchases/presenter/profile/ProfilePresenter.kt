@@ -12,6 +12,10 @@ interface ProfilePresenter {
 
     fun refresh()
 
+    fun emailContactSelect()
+    fun phoneContactSelect()
+    fun addressContactSelect()
+
     fun buyCoffee()
     fun buyBeer()
     fun buyHotdog()

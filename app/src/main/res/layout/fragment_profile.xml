@@ -2,18 +2,19 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_profile_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/user_donate_page"
+        android:id="@+id/profile_donate_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
         tools:visibility="visible">
 
         <ImageView
-            android:id="@+id/user_image"
+            android:id="@+id/profile_image"
             android:layout_width="@dimen/image_size_profile"
             android:layout_height="@dimen/image_size_profile"
             android:layout_marginTop="@dimen/margin_default_large"
@@ -23,19 +24,19 @@
             tools:src="@drawable/ic_person" />
 
         <TextView
-            android:id="@+id/user_name"
+            android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_default_medium"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/text_size_user_name"
+            android:textSize="@dimen/text_size_profile_name"
             tools:text="domino_1099"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_image" />
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
         <TextView
-            android:id="@+id/user_bio"
+            android:id="@+id/profile_bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_default_double"
@@ -43,61 +44,61 @@
             android:layout_marginEnd="@dimen/margin_default_double"
             android:paddingStart="@dimen/margin_default_double"
             android:paddingEnd="@dimen/margin_default_double"
-            android:textSize="@dimen/text_size_user_info"
+            android:textSize="@dimen/text_size_profile_info"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_name"
+            app:layout_constraintTop_toBottomOf="@+id/profile_name"
             tools:text="Welcome to the official DonateMe page for domino_1099!" />
 
         <ImageView
-            android:id="@+id/user_email"
+            android:id="@+id/profile_contact_email"
             android:layout_width="@dimen/image_size_contact"
             android:layout_height="@dimen/image_size_contact"
             android:layout_marginEnd="@dimen/margin_default_double"
             android:src="@drawable/ic_email"
-            app:layout_constraintBottom_toBottomOf="@+id/user_phone"
-            app:layout_constraintEnd_toStartOf="@+id/user_phone" />
+            app:layout_constraintBottom_toBottomOf="@+id/profile_contact_phone"
+            app:layout_constraintEnd_toStartOf="@+id/profile_contact_phone" />
 
         <ImageView
-            android:id="@+id/user_phone"
+            android:id="@+id/profile_contact_phone"
             android:layout_width="@dimen/image_size_contact"
             android:layout_height="@dimen/image_size_contact"
             android:layout_marginTop="@dimen/margin_default_double"
             android:src="@drawable/ic_local_phone"
-            app:layout_constraintEnd_toEndOf="@+id/user_bio"
-            app:layout_constraintStart_toStartOf="@+id/user_bio"
-            app:layout_constraintTop_toBottomOf="@+id/user_bio" />
+            app:layout_constraintEnd_toEndOf="@+id/profile_bio"
+            app:layout_constraintStart_toStartOf="@+id/profile_bio"
+            app:layout_constraintTop_toBottomOf="@+id/profile_bio" />
 
         <ImageView
-            android:id="@+id/user_address"
+            android:id="@+id/profile_contact_address"
             android:layout_width="@dimen/image_size_contact"
             android:layout_height="@dimen/image_size_contact"
             android:layout_marginStart="@dimen/margin_default_double"
             android:src="@drawable/ic_location_on"
-            app:layout_constraintBottom_toBottomOf="@+id/user_phone"
-            app:layout_constraintStart_toEndOf="@+id/user_phone" />
+            app:layout_constraintBottom_toBottomOf="@+id/profile_contact_phone"
+            app:layout_constraintStart_toEndOf="@+id/profile_contact_phone" />
 
         <Button
-            android:id="@+id/user_donate_coffee"
+            android:id="@+id/profile_donate_coffee"
             style="@style/DonateButton"
-            android:text="@string/user_donate_coffee"
-            app:layout_constraintBottom_toTopOf="@+id/user_donate_beer"
-            app:layout_constraintEnd_toEndOf="@+id/user_donate_beer"
-            app:layout_constraintStart_toStartOf="@+id/user_donate_beer" />
+            android:text="@string/profile_donate_coffee"
+            app:layout_constraintBottom_toTopOf="@+id/profile_donate_beer"
+            app:layout_constraintEnd_toEndOf="@+id/profile_donate_beer"
+            app:layout_constraintStart_toStartOf="@+id/profile_donate_beer" />
 
         <Button
-            android:id="@+id/user_donate_beer"
+            android:id="@+id/profile_donate_beer"
             style="@style/DonateButton"
-            android:text="@string/user_donate_beer"
-            app:layout_constraintBottom_toTopOf="@+id/user_donate_hotdog"
-            app:layout_constraintEnd_toEndOf="@+id/user_donate_hotdog"
-            app:layout_constraintStart_toStartOf="@+id/user_donate_hotdog" />
+            android:text="@string/profile_donate_beer"
+            app:layout_constraintBottom_toTopOf="@+id/profile_donate_hotdog"
+            app:layout_constraintEnd_toEndOf="@+id/profile_donate_hotdog"
+            app:layout_constraintStart_toStartOf="@+id/profile_donate_hotdog" />
 
         <Button
-            android:id="@+id/user_donate_hotdog"
+            android:id="@+id/profile_donate_hotdog"
             style="@style/DonateButton"
-            android:text="@string/user_donate_hotdog"
+            android:text="@string/profile_donate_hotdog"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -105,7 +106,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ProgressBar
-        android:id="@+id/user_data_loader"
+        android:id="@+id/profile_data_loader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -114,7 +115,7 @@
         tools:visibility="visible" />
 
     <LinearLayout
-        android:id="@+id/user_data_load_error_view"
+        android:id="@+id/profile_data_load_error_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -136,16 +137,16 @@
             android:textAlignment="center"
             android:textSize="@dimen/text_size_error"
             android:textColor="@color/colorErrorIndicator"
-            android:text="@string/user_load_error_message" />
+            android:text="@string/profile_load_error_message" />
 
         <Button
-            android:id="@+id/user_data_refresh"
+            android:id="@+id/profile_data_refresh"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_default"
             android:textColor="@color/colorPrimary"
-            android:text="@string/user_load_error_action" />
+            android:text="@string/profile_load_error_action" />
 
     </LinearLayout>
 
