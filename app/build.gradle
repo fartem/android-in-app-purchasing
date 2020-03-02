@@ -4,18 +4,39 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion '29.0.2'
     defaultConfig {
-        applicationId "com.smlnskgmail.jaman.androidin_apppurchases"
+        applicationId 'com.smlnskgmail.jaman.androidin_apppurchases'
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.0"
+        versionName '1.0.0'
+
+        buildConfigField 'String', 'API_IMPL', "\"\""
+    }
+    buildTypes {
+        debug {
+
+        }
+    }
+
+    flavorDimensions 'build'
+    productFlavors {
+        randomuser {
+            flavorDimensions 'build'
+
+            buildConfigField 'String', 'API_IMPL', "\"RANDOM_USER\""
+        }
+        debugImpl {
+            flavorDimensions 'build'
+
+            buildConfigField 'String', 'API_IMPL', "\"DEBUG_IMPL\""
+        }
     }
 }
 
 dependencies {
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.smlnskgmail.jaman.androidin_apppurchases.BuildConfig
 import com.smlnskgmail.jaman.androidin_apppurchases.R
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.Profile
+import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.ProfileApi
+import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.debug.DebugProfileApi
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.RandomUserProfileApi
 import com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile.ProfilePresenter
 import com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile.ProfilePresenterImpl
@@ -23,7 +26,7 @@ class ProfileFragment : Fragment(), ProfileView {
         profilePresenter = ProfilePresenterImpl()
         profilePresenter.initialize(
             this,
-            RandomUserProfileApi()
+            profileApi()
         )
 
         user_donate_coffee.setOnClickListener {
@@ -34,6 +37,14 @@ class ProfileFragment : Fragment(), ProfileView {
         }
         user_donate_hotdog.setOnClickListener {
             profilePresenter.buyHotdog()
+        }
+    }
+
+    private fun profileApi(): ProfileApi {
+        return if (BuildConfig.API_IMPL == "DEBUG_IMPL") {
+            DebugProfileApi(context!!)
+        } else {
+            RandomUserProfileApi()
         }
     }
 

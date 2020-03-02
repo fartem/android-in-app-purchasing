@@ -7,7 +7,7 @@ import com.smlnskgmail.jaman.androidin_apppurchases.R
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.Profile
 import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.ProfileApi
 
-class DebugUserApi(
+class DebugProfileApi(
     private val context: Context
 ) : ProfileApi {
 
