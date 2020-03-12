@@ -1,11 +1,11 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.retrofit.deserializers
+package com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.retrofit.deserializers
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.RandomUserProfile
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.retrofit.responses.RandomUserResponse
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.RandomUserProfile
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.retrofit.responses.RandomUserResponse
 import java.lang.reflect.Type
 
 class RandomUserResponseDeserializer : JsonDeserializer<RandomUserResponse> {

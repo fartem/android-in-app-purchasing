@@ -1,13 +1,13 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser
+package com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser
 
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import com.google.gson.GsonBuilder
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.ProfileApi
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.retrofit.RandomUserService
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.retrofit.deserializers.RandomUserResponseDeserializer
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.retrofit.responses.RandomUserResponse
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.ProfileApi
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.retrofit.RandomUserService
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.retrofit.deserializers.RandomUserResponseDeserializer
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.retrofit.responses.RandomUserResponse
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Target
 import retrofit2.Call

@@ -1,4 +1,4 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api
+package com.smlnskgmail.jaman.androidinapppurchases.model.profile.api
 
 interface ProfileApi {
 

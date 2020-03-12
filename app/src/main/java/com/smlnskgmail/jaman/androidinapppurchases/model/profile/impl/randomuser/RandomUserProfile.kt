@@ -1,7 +1,7 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser
+package com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser
 
 import android.graphics.drawable.Drawable
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.Profile
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.Profile
 
 class RandomUserProfile(
     private val name: String,

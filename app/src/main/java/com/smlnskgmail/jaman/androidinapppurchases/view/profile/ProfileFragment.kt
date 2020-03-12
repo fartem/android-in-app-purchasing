@@ -1,4 +1,4 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.view.profile
+package com.smlnskgmail.jaman.androidinapppurchases.view.profile
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -11,14 +11,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
-import com.smlnskgmail.jaman.androidin_apppurchases.BuildConfig
-import com.smlnskgmail.jaman.androidin_apppurchases.R
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.Profile
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.ProfileApi
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.debug.DebugProfileApi
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.impl.randomuser.RandomUserProfileApi
-import com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile.ProfilePresenter
-import com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile.ProfilePresenterImpl
+import com.smlnskgmail.jaman.androidinapppurchases.BuildConfig
+import com.smlnskgmail.jaman.androidinapppurchases.R
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.Profile
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.ProfileApi
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.debug.DebugProfileApi
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.randomuser.RandomUserProfileApi
+import com.smlnskgmail.jaman.androidinapppurchases.presenter.profile.ProfilePresenter
+import com.smlnskgmail.jaman.androidinapppurchases.presenter.profile.ProfilePresenterImpl
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment(), ProfileView {

@@ -1,7 +1,7 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.presenter.profile
+package com.smlnskgmail.jaman.androidinapppurchases.presenter.profile
 
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.ProfileApi
-import com.smlnskgmail.jaman.androidin_apppurchases.view.profile.ProfileView
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.ProfileApi
+import com.smlnskgmail.jaman.androidinapppurchases.view.profile.ProfileView
 
 interface ProfilePresenter {
 

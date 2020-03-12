@@ -1,6 +1,6 @@
-package com.smlnskgmail.jaman.androidin_apppurchases.view.profile
+package com.smlnskgmail.jaman.androidinapppurchases.view.profile
 
-import com.smlnskgmail.jaman.androidin_apppurchases.model.profile.api.Profile
+import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.Profile
 
 interface ProfileView {
 

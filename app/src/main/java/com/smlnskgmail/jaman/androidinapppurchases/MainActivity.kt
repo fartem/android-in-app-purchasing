@@ -1,8 +1,8 @@
-package com.smlnskgmail.jaman.androidin_apppurchases
+package com.smlnskgmail.jaman.androidinapppurchases
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.smlnskgmail.jaman.androidin_apppurchases.view.profile.ProfileFragment
+import com.smlnskgmail.jaman.androidinapppurchases.view.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,9 +12,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showProfileFragment() {
-        supportFragmentManager.beginTransaction()
-            .add(android.R.id.content, ProfileFragment())
-            .commit()
+        supportFragmentManager.beginTransaction().let {
+            it.add(android.R.id.content, ProfileFragment())
+            it.commit()
+        }
     }
 
 }
