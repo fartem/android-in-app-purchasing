@@ -6,9 +6,7 @@ import retrofit2.http.GET
 
 interface RandomUserService {
 
-    @GET(
-        "api"
-    )
+    @GET("api")
     fun randomProfile(): Call<RandomUserResponse>
 
 }
