@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.smlnskgmail.jaman.androidinapppurchases.BuildConfig
 import com.smlnskgmail.jaman.androidinapppurchases.R
+import com.smlnskgmail.jaman.androidinapppurchases.iab.IabGatewayTarget
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.Profile
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.ProfileApi
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.impl.debug.DebugProfileApi
@@ -21,7 +22,7 @@ import com.smlnskgmail.jaman.androidinapppurchases.presenter.profile.ProfilePres
 import com.smlnskgmail.jaman.androidinapppurchases.presenter.profile.ProfilePresenterImpl
 import kotlinx.android.synthetic.main.fragment_profile.*
 
-class ProfileFragment : Fragment(), ProfileView {
+class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
 
     private lateinit var profilePresenter: ProfilePresenter
 
@@ -172,6 +173,28 @@ class ProfileFragment : Fragment(), ProfileView {
             container,
             false
         )
+    }
+
+    override fun iabProgress(begin: Boolean) {
+
+    }
+
+    override fun iabError() {
+
+    }
+
+    override fun iabPurchaseComplete(
+        success: Boolean
+    ) {
+
+    }
+
+    override fun iabPurchaseInfo(sku: String) {
+
+    }
+
+    override fun iabProductInfo(sku: String) {
+
     }
 
 }
