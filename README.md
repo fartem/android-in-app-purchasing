@@ -3,7 +3,7 @@
 Android App Development: In-App Purchasing
 =============
 
-![Travis CI](https://img.shields.io/travis/fartem/android-accessibility)
+![Travis CI](https://img.shields.io/travis/fartem/android-in-app-purchasing)
 
 About
 -------------
