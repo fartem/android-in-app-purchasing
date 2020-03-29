@@ -23,8 +23,4 @@ interface ProfileView {
         address: String
     )
 
-    fun buyCoffee()
-    fun buyBeer()
-    fun buyHotdog()
-
 }

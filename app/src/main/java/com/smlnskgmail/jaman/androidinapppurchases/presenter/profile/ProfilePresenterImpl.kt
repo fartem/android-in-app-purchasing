@@ -1,6 +1,7 @@
 package com.smlnskgmail.jaman.androidinapppurchases.presenter.profile
 
-import com.smlnskgmail.jaman.androidinapppurchases.iab.IabGatewayTarget
+import com.smlnskgmail.jaman.androidinapppurchases.BuildConfig
+import com.smlnskgmail.jaman.androidinapppurchases.iab.IabGateway
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.Profile
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.ProfileApi
 import com.smlnskgmail.jaman.androidinapppurchases.view.profile.ProfileView
@@ -9,18 +10,18 @@ class ProfilePresenterImpl : ProfilePresenter {
 
     private lateinit var profileView: ProfileView
     private lateinit var profileApi: ProfileApi
-    private lateinit var iab: IabGatewayTarget
+    private lateinit var iabGateway: IabGateway
 
     private lateinit var profile: Profile
 
     override fun initialize(
         profileView: ProfileView,
         profileApi: ProfileApi,
-        iab: IabGatewayTarget
+        iabGateway: IabGateway
     ) {
         this.profileView = profileView
         this.profileApi = profileApi
-        this.iab = iab
+        this.iabGateway = iabGateway
 
         refresh()
     }
@@ -64,15 +65,21 @@ class ProfilePresenterImpl : ProfilePresenter {
     }
 
     override fun buyCoffee() {
-        profileView.buyCoffee()
+        iabGateway.purchase(
+            BuildConfig.IAB_SKU_COFFEE
+        )
     }
 
     override fun buyBeer() {
-        profileView.buyBeer()
+        iabGateway.purchase(
+            BuildConfig.IAB_SKU_BEER
+        )
     }
 
     override fun buyHotdog() {
-        profileView.buyHotdog()
+        iabGateway.purchase(
+            BuildConfig.IAB_SKU_HOTDOG
+        )
     }
 
 }

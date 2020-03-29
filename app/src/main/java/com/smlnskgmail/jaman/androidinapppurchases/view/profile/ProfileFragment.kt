@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.smlnskgmail.jaman.androidinapppurchases.BuildConfig
 import com.smlnskgmail.jaman.androidinapppurchases.R
+import com.smlnskgmail.jaman.androidinapppurchases.iab.IabGateway
 import com.smlnskgmail.jaman.androidinapppurchases.iab.IabGatewayTarget
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.Profile
 import com.smlnskgmail.jaman.androidinapppurchases.model.profile.api.ProfileApi
@@ -34,7 +35,10 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
         profilePresenter.initialize(
             this,
             profileApi(),
-            iab()
+            IabGateway(
+                this,
+                activity!!
+            )
         )
 
         profile_contact_email.setOnClickListener {
@@ -65,10 +69,6 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
         } else {
             RandomUserProfileApi()
         }
-    }
-
-    private fun iab(): IabGatewayTarget {
-        return this
     }
 
     override fun profileLoaded(
@@ -157,18 +157,6 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
         snackbar.show()
     }
 
-    override fun buyCoffee() {
-
-    }
-
-    override fun buyBeer() {
-
-    }
-
-    override fun buyHotdog() {
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -181,26 +169,28 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
         )
     }
 
-    override fun iabProgress(begin: Boolean) {
-
-    }
-
-    override fun iabError() {
-
+    private fun showSnackbar(
+        message: String
+    ) {
+        Snackbar.make(
+            root_profile_view,
+            message,
+            Snackbar.LENGTH_LONG
+        ).show()
     }
 
     override fun iabPurchaseComplete(
         success: Boolean
     ) {
-
-    }
-
-    override fun iabPurchaseInfo(sku: String) {
-
-    }
-
-    override fun iabProductInfo(sku: String) {
-
+        showSnackbar(
+            getString(
+                if (success) {
+                    R.string.purchase_success
+                } else {
+                    R.string.purchase_error
+                }
+            )
+        )
     }
 
 }

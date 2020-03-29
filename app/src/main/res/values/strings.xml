@@ -11,4 +11,8 @@
     <string name="profile_load_error_action">Refresh</string>
 
     <string name="profile_address_action">Copy</string>
+
+    <string name="purchase_started">Purchase started!</string>
+    <string name="purchase_success">Purchase success!</string>
+    <string name="purchase_error">Purchase error!</string>
 </resources>
