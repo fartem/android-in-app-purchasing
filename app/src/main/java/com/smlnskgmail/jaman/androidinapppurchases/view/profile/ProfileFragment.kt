@@ -33,7 +33,8 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
         profilePresenter = ProfilePresenterImpl()
         profilePresenter.initialize(
             this,
-            profileApi()
+            profileApi(),
+            iab()
         )
 
         profile_contact_email.setOnClickListener {
@@ -58,11 +59,16 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
     }
 
     private fun profileApi(): ProfileApi {
+        @Suppress("ConstantConditionIf")
         return if (BuildConfig.API_IMPL == "DEBUG_IMPL") {
             DebugProfileApi(context!!)
         } else {
             RandomUserProfileApi()
         }
+    }
+
+    private fun iab(): IabGatewayTarget {
+        return this
     }
 
     override fun profileLoaded(

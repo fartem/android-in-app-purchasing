@@ -15,6 +15,10 @@ android {
         versionName '1.0.0'
 
         buildConfigField 'String', 'API_IMPL', "\"\""
+
+        buildConfigField 'String', 'IAB_SKU_COFFEE', "\"product_coffee\""
+        buildConfigField 'String', 'IAB_SKU_BEER', "\"product_beer\""
+        buildConfigField 'String', 'IAB_SKU_HOTDOG', "\"product_hotdog\""
     }
     buildTypes {
         debug {
