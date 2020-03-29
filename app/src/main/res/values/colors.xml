@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#26418f</color>
     <color name="colorAccent">#fff59d</color>
 
-    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="colorLauncherBackground">#5C6BC0</color>
 
     <color name="colorErrorIndicator">#9E9E9E</color>
 </resources>
