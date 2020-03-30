@@ -8,7 +8,7 @@ Android App Development: In-App Purchasing
 About
 -------------
 
-App based on "Android App Development: In-App Purchasing" course.
+App based on ["Android App Development: In-App Purchasing"](https://www.linkedin.com/learning/android-app-development-in-app-purchasing) course.
 
 Course
 -------------
