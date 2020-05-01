@@ -16,7 +16,9 @@ class IabGateway(
     fun purchase(sku: String) {
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingServiceDisconnected() {
-                iabGatewayTarget.iabPurchaseComplete(false)
+                iabGatewayTarget.iabPurchaseComplete(
+                    false
+                )
             }
 
             override fun onBillingSetupFinished(
@@ -33,8 +35,7 @@ class IabGateway(
                     billingClient.querySkuDetailsAsync(
                         parameters.build()
                     ) { billing, skus ->
-                        if (billing?.responseCode
-                            == BillingClient.BillingResponseCode.OK) {
+                        if (billing?.responseCode == BillingClient.BillingResponseCode.OK) {
                             val billingFlowParams = BillingFlowParams.newBuilder()
                             billingFlowParams.setSkuDetails(skus[0])
                             billingClient.launchBillingFlow(
@@ -42,12 +43,16 @@ class IabGateway(
                                 billingFlowParams.build()
                             )
                         } else {
-                            iabGatewayTarget.iabPurchaseComplete(false)
+                            iabGatewayTarget.iabPurchaseComplete(
+                                false
+                            )
                         }
                     }
                 }
                 else {
-                    iabGatewayTarget.iabPurchaseComplete(false)
+                    iabGatewayTarget.iabPurchaseComplete(
+                        false
+                    )
                 }
             }
         })

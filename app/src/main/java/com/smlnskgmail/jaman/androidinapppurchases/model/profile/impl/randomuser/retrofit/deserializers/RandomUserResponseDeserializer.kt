@@ -22,8 +22,7 @@ class RandomUserResponseDeserializer : JsonDeserializer<RandomUserResponse> {
             val data = json.getAsJsonArray("results")[0] as JsonObject
 
             val dataName = data.get("name") as JsonObject
-            val name = "${dataName.get("first").asString} " +
-                    dataName.get("last").asString
+            val name = "${dataName.get("first").asString} " + dataName.get("last").asString
 
             val email = data.get("email").asString
             val phone = data.get("phone").asString

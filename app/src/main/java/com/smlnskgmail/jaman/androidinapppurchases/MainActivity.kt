@@ -13,7 +13,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun showProfileFragment() {
         supportFragmentManager.beginTransaction().let {
-            it.add(android.R.id.content, ProfileFragment())
+            it.add(
+                android.R.id.content,
+                ProfileFragment()
+            )
             it.commit()
         }
     }

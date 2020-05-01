@@ -152,7 +152,9 @@ class ProfileFragment : Fragment(), ProfileView, IabGatewayTarget {
                 getString(R.string.app_name),
                 address
             )
-            clipboardManager.setPrimaryClip(clipData)
+            clipboardManager.setPrimaryClip(
+                clipData
+            )
         }
         snackbar.show()
     }
