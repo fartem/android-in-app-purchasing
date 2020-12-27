@@ -2,7 +2,7 @@
 
 # Android App Development: In-App Purchasing
 
-[![Travis CI](https://travis-ci.org/fartem/android-in-app-purchasing.svg?branch=master)](https://travis-ci.org/fartem/android-in-app-purchasing)
+[![GitHubActions](https://github.com/fartem/android-in-app-purchasin/workflows/Build/badge.svg)](https://github.com/fartem/android-in-app-purchasin/actions?query=workflow%3ABuild)
 
 ## About
 
